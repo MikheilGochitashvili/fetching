@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github followers</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      img {
+        width: 55px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="hidden text">I am a hidden message</h1>
+    <button class="revealButton">Show hidden message</button>
+
+    <ul class="github-followers"></ul>
+
+    
+
+    <script type="module">
+      import { geterateFollowersList } from './dom-functions.js'
+      import { fetchGithubUserFollowers } from './fetch-functions.js'
+
+      fetchGithubUserFollowers("otarza", generateFollowersList);
+
+    </script>
+
+    <script>
+      // const element = document.querySelector('.text');
+      // const button = document.querySelector('.revealButton');
+
+      // addRevealButtonListener(button, element);
+    </script>
+  </body>
+</html>
